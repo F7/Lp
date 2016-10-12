@@ -1,0 +1,16 @@
+{
+  "name": "Lp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "node-sass --include-path scss src/scss/styles.scss dist/css/custom.css",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "watch": "npm run watch:css",
+    "server": "lr-http-server -p 8000 -d dist/ -l 35729 -w css/*.css,*.html"
+  },
+  "devDependencies": {
+    "lr-http-server": "^0.1.5",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {}
+}
