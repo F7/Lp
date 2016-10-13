@@ -1,7 +1,7 @@
 {
   "name": "Lp",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"This is a test.\"",
     "build:css": "node-sass --include-path scss src/scss/styles.scss dist/css/custom.css",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "watch": "npm run watch:css",

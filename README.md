@@ -11,7 +11,7 @@ A simple webpage starter template with `bootstrap` and webserver using only `npm
 
 ## Environment
 #### 1. system environment (of mine)
-- OSX 10.1.6 El Capitan
+- OSX 10.11.6 El Capitan
 - homebrew 0.9.9
 
 #### 2. html/css included environment

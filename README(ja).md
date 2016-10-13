@@ -1,5 +1,5 @@
 # Lp
-`bootstrap`と`npm-scripts`だけを使用して動作するシンプルなwebページテンプレートとWebserverです。
+`bootstrap`と`npm-scripts`だけを使用して動作するシンプルなwebページテンプレートとWeb serverです。
 
 ## Concept
 - ベースとなるcssフレームワークとして[Bootstrap](http://getbootstrap.com)を使う
@@ -10,7 +10,7 @@
 
 ## 環境
 #### 1. システム環境 (私のマシンの環境)
-- OSX 10.1.6 El Capitan
+- OSX 10.11.6 El Capitan
 - homebrew 0.9.9
 
 #### 2. 内包するhtml/cssの環境
@@ -27,14 +27,14 @@
 
 
 ## コマンド / 操作方法
-現状、2つのシェルウィンドウを開く必要があります。1つめはsassをwatchして、cssにコンバートするためのウィンドウ（window1）、もうひとつは、ライブリロードするためのローカルWebサーバー用です。
+現状、2つのシェルウィンドウを開く必要があります。1つめはsassをwatchして、cssにコンバートするためのウィンドウ（window1）、もうひとつは、ライブリロードするためのローカルWebサーバー用（window2）です。
 
-まずwindow1で:
+まずwindow1で、
 ```
 npm run watch
 ```
 
-を叩き、次に、window2で:
+でSassをwatchし、次に、window2で、
 ```
 npm run server
 ```
