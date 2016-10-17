@@ -26,9 +26,11 @@ A simple webpage starter template with `bootstrap` and webserver using only `npm
 - [lr-http-server 0.1.5](https://www.npmjs.com/package/lr-http-server)
 - [node-sass 3.10.1](https://www.npmjs.com/package/node-sass)
 - [nodemon 1.11.0](https://www.npmjs.com/package/nodemon)
-
+- [yuicompressor 2.4.8](https://www.npmjs.com/package/yuicompressor)
 
 ## Commands / How to run
+
+### Run, Scss Watch
 Currently, opening 2 shell windows are required. One is for watching sass to convert to css (window1), the other is for local web server with live reloading (window2).
 
 on window1:
@@ -43,8 +45,15 @@ npm run server
 
 so you can see `127.0.0.1:8000` as `dist/index.html`. When you update `src/scss/styles.scss` or `any html files on dist directory`, the changes are detected by live-reloading process at window2 with scss files converted to `dist/css/custom.css`, then the page is automatically reloaded.
 
+### Build with CSS minify
+Currently, minifying only custom.css by using yuicompressor. Use the command:
+```
+npm run build
+```
+then it will compress custom.css and overwrite the file. This doesn't combine other css file. This will happen in the next version.
+
 
 ## Next Steps
-- build
+- html minify
 - imagemin
-- cssmin
+- join css files to make one
