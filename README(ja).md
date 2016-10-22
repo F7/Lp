@@ -3,7 +3,7 @@
 
 
 ## お知らせ
-バージョン0.2.0から0.3.0にアップグレードする際には、正しく動作するために、もう一度`npm install`をして、新しく追加されたスクリプト（html-minifier）をインストールしてください。
+バージョンアップグレードする際には、正しく動作するために、もう一度`npm install`を行い、新しく追加されたパッケージをインストールしてください。
 
 
 ## コンセプト
@@ -31,6 +31,8 @@
 - [nodemon 1.11.0](https://www.npmjs.com/package/nodemon)
 - [yuicompressor 2.4.8](https://www.npmjs.com/package/yuicompressor)
 - [html-minifier 3.1.0](https://www.npmjs.com/package/html-minifier)
+- [imagemin 5.2.2](https://www.npmjs.com/package/imagemin)
+- [imagemin-cli 3.0.0](https://www.npmjs.com/package/imagemin-cli)
 
 ## コマンド / 操作方法
 

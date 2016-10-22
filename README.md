@@ -2,7 +2,7 @@
 A simple webpage starter template with `bootstrap` and webserver using only `npm-scripts`.
 
 ## Announcement
-From version 0.3.0 to 0.4.0, you need to type `npm install` once again to install newly added scripts and run correctly.
+When version upgraded, you need to type `npm install` once again to install newly added packages and run correctly.
 
 ## Concept
 - Use [Bootstrap](http://getbootstrap.com) as base css framework.
