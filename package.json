@@ -2,18 +2,22 @@
   "name": "Lp",
   "scripts": {
     "test": "echo \"This is a test.\"",
+    "build:css-dev": "node-sass --include-path scss src/scss/styles.scss src/css/custom.css",
+    "watch:css-dev": "nodemon -e scss -x \"npm run build:css-dev\"",
+    "watch": "npm run watch:css-dev",
+    "server-dev": "lr-http-server -p 8080 -d src/ -l 35729 -w css/*.css,*.html",
     "build:css": "node-sass --include-path scss src/scss/styles.scss dist/css/custom.css",
     "minify:customcss": "yuicompressor dist/css/custom.css -o dist/css/custom.css",
-    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
-    "watch": "npm run watch:css",
-    "server": "lr-http-server -p 8000 -d dist/ -l 35729 -w css/*.css,*.html",
-    "build": "npm run build:css && npm run minify:customcss"
+    "minify:html": "html-minifier src/index.html --collapse-boolean-attributes --collapse-whitespace --decode-entities --html5 --process-conditional-comments --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype -o dist/index.html",
+    "server": "lr-http-server -p 8000 -d dist/ -l false",
+    "build": "npm run build:css && npm run minify:customcss && npm run minify:html"
   },
   "devDependencies": {
     "lr-http-server": "^0.1.5",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
-    "yuicompressor": "^2.4.8"
+    "yuicompressor": "^2.4.8",
+    "html-minifier": "^3.1.0"
   },
   "dependencies": {}
 }
