@@ -44,7 +44,7 @@ npm run watch
 
 でSassをwatchし、次に、window2で、
 ```
-npm run server-dev
+npm run server
 ```
 を実行してください。`127.0.0.1:8080`のURLで`src/index.html`が開きます。`src/scss/styles.scss`またはsrcディレクトリ内のHTMLファイルをアップデートすると、scssは`src/css/custom.css`に変換された上で、それらの変更がライブリロードプロセスに検知され、ページが自動的にリロードされます。
 
@@ -53,15 +53,34 @@ npm run server-dev
 ```
 npm run build
 ```
-を使用すると、yuicompressorによって`src/css/custom.css`が圧縮されて`dist/css/custom.css`に、html-minifierによって`src/index.html`が圧縮されて`dist/index.html`に保存されます。現時点では他のcssファイルを結合したりすることはできません。
+を使用すると、yuicompressorによって`src/css/custom.css`が圧縮されて`dist/css/custom.css`に、html-minifierによって`src/index.html`が圧縮されて`dist/index.html`に保存されます。（現時点では他のcssファイルを結合したりすることはできません。）
 
 ### ビルド後の圧縮されたHTML、CSSを確認する
 ```
-npm run server
+npm run Lp
 ```
-このコマンドは最終確認用にビルドされたHTMLを確認します。`127.0.0.1:8000`のURLで`dist/index.html`が開きます。(ライブリロードはしません)
+このコマンドはビルドプロセスを走らせた後、最終確認用にビルドされたHTMLを確認します。`127.0.0.1:8000`のURLで`dist/index.html`が開きます。(ライブリロードはしません)
 
 
-## ネクストステップ（考え中）
-- imagemin
-- 複数のcssファイルを圧縮しつつ結合して1ファイルにする
+## ネクストステップ
+- ビルド時に、dist内のファイルをすべてcleanしてから、srcから持ってくる
+- 複数のcssファイルを圧縮しつつ結合して1ファイルにする (concat)
+
+
+## コマンドリファレンス
+上記で説明したコマンド以外の説明も含む、全コマンドのリファレンスです。下部の4つの(*)がついたもののみを使うだけで、支障なく作業できます。
+
+| Command  | Explanation  |
+|---|---|
+| test | テストコマンド。「Hello, World!」を標準出力します |
+| build:css-dev | scss (src/scss/styles.scss) を src/css (src/css/custom.css)にビルドして保存します |
+| watch:css-dev | build:css-devを監視します |
+| build:css | scss (src/scss/styles.scss) を dist/css (dist/css/custom.css)にビルドして保存します |
+| minify:customcss | dist/css/custom.css をminifyして上書き保存します |
+| minify:html| src/index.html をminifyして dist/index.htmlに保存します |
+| minify:images | src/img/* 内の全ての画像ファイルをminifyして dist/img/*に保存します |
+| server-prd | dist/index.htmlを 127.0.0.1:8000にライブリロードなしでwebserverとして起動します |
+| __watch__ * | watch:css-devのショートカットコマンド。scssの保存を監視し、src/css/custom.cssに展開します |
+| __server__ * | src/index.htmlを 127.0.0.1:8080にwebserverとして起動し、35729ポートで監視してライブリロードします（制作用） |
+| __build__ * | build:css + minify:customcss + minify:html + minify:images。srcディレクトリ内のCSS, HTML, 画像をminifyしてdistに保存します。 |
+| __Lp__ * | build + server-prd。全ビルド工程を行った後、dist/index.htmlをwebserverとして起動します（最終確認用） |
