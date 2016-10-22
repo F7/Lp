@@ -50,18 +50,18 @@ npm run server
 ```
 を実行してください。`127.0.0.1:8080`のURLで`src/index.html`が開きます。`src/scss/styles.scss`またはsrcディレクトリ内のHTMLファイルをアップデートすると、scssは`src/css/custom.css`に変換された上で、それらの変更がライブリロードプロセスに検知され、ページが自動的にリロードされます。
 
-### HTML、CSSをminifyしてビルドする
+### ビルドする（CSS, HTML, 画像をminify）
 現状、yuicompressorを使ってsrc配下のcustom.cssをminify、またhtml-minifierを使ってHTMLをminifyした圧縮ファイルをdist配下に保存します。
 ```
 npm run build
 ```
 を使用すると、yuicompressorによって`src/css/custom.css`が圧縮されて`dist/css/custom.css`に、html-minifierによって`src/index.html`が圧縮されて`dist/index.html`に保存されます。（現時点では他のcssファイルを結合したりすることはできません。）
 
-### ビルド後の圧縮されたHTML、CSSを確認する
+### ビルド後の圧縮されたHTML、CSS、画像を、Production環境で確認する
 ```
 npm run Lp
 ```
-このコマンドはビルドプロセスを走らせた後、最終確認用にビルドされたHTMLを確認します。`127.0.0.1:8000`のURLで`dist/index.html`が開きます。(ライブリロードはしません)
+このコマンドはビルドプロセスを走らせ、HTML / CSS / 画像を圧縮した後、最終確認用にビルドされたHTMLを確認します。`127.0.0.1:8000`のURLで`dist/index.html`が開きます。(ライブリロードはしません)
 
 
 ## ネクストステップ
