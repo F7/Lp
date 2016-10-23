@@ -87,7 +87,7 @@ npm run Lp
 | __build__ * | build:css + minify:customcss + minify:html + minify:images。srcディレクトリ内のCSS, HTML, 画像をminifyしてdistに保存します。 |
 | __Lp__ * | build + server-prd。全ビルド工程を行った後、dist/index.htmlをwebserverとして起動します（最終確認用） |
 
-## Dockerで機能
+## Dockerで実行
 Docker for Macをインストールします。(https://docs.docker.com/docker-for-mac/)
 
 ```
