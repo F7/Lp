@@ -90,7 +90,7 @@ The references of all the commands. Only four commands with (*) at the bottom ar
 Install Docker for Mac (https://docs.docker.com/docker-for-mac/)
 
 ```
-$ docker-compose up
+$ docker-compose up -d
 
 $ open http://localhost:8080
 ```

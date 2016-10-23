@@ -89,6 +89,8 @@ npm run Lp
 
 ## Dockerで機能
 Docker for Macをインストールします。(https://docs.docker.com/docker-for-mac/)
+
 ```
-$ docker-compose up
+$ docker-compose up -d
+$ open http://localhost:8080
 ```
