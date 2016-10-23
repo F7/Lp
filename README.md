@@ -91,6 +91,7 @@ Install Docker for Mac (https://docs.docker.com/docker-for-mac/)
 
 ```
 $ docker-compose up -d
-
 $ open http://localhost:8080
+
+$ docker-compose logs -f
 ```

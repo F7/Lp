@@ -93,4 +93,6 @@ Docker for Macをインストールします。(https://docs.docker.com/docker-f
 ```
 $ docker-compose up -d
 $ open http://localhost:8080
+
+$ docker-compose logs -f
 ```
