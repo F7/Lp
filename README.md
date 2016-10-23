@@ -85,3 +85,12 @@ The references of all the commands. Only four commands with (*) at the bottom ar
 | __server__ * | running webserver to 127.0.0.1:8080 from src directory with livereloading at :35729 |
 | __build__ * | build:css + minify:customcss + minify:html + minify:images |
 | __Lp__ * | build + server-prd |
+
+## Run with Docker
+Install Docker for Mac (https://docs.docker.com/docker-for-mac/)
+
+```
+$ docker-compose up
+
+$ open http://localhost:8080
+```
