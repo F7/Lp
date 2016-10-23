@@ -86,3 +86,13 @@ npm run Lp
 | __server__ * | src/index.htmlを 127.0.0.1:8080にwebserverとして起動し、35729ポートで監視してライブリロードします（制作用） |
 | __build__ * | build:css + minify:customcss + minify:html + minify:images。srcディレクトリ内のCSS, HTML, 画像をminifyしてdistに保存します。 |
 | __Lp__ * | build + server-prd。全ビルド工程を行った後、dist/index.htmlをwebserverとして起動します（最終確認用） |
+
+## Dockerで実行
+Docker for Macをインストールします。(https://docs.docker.com/docker-for-mac/)
+
+```
+$ docker-compose up -d
+$ open http://localhost:8080
+
+$ docker-compose logs -f
+```
