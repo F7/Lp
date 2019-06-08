@@ -11,27 +11,30 @@ When version upgraded, you need to type `npm install` once again to install newl
 - Local web server with live reload detecting the file updates of html, scss.
 
 
-## Environment
+## Environment (2019)
 #### 1. system environment (of mine)
-- OSX 10.11.6 El Capitan
-- homebrew 0.9.9
+- OSX 10.14.5 Mojave
+- homebrew 2.1.4
 
 #### 2. html/css included environment
 - bootstrap 3.3.1 (minimumly included)
 
 #### 3. node / npm environment (of mine)
 (Installed from homebrew. Not tested other than latest)
-- node v6.7.0
-- npm 3.10.3
+- node v12.4.0
+- npm 6.9.0
 
 ###### package requirement
 - [lr-http-server 0.1.5](https://www.npmjs.com/package/lr-http-server)
-- [node-sass 3.10.1](https://www.npmjs.com/package/node-sass)
-- [nodemon 1.11.0](https://www.npmjs.com/package/nodemon)
-- [yuicompressor 2.4.8](https://www.npmjs.com/package/yuicompressor)
-- [html-minifier 3.1.0](https://www.npmjs.com/package/html-minifier)
-- [imagemin 5.2.2](https://www.npmjs.com/package/imagemin)
-- [imagemin-cli 3.0.0](https://www.npmjs.com/package/imagemin-cli)
+- [node-sass 4.12.0](https://www.npmjs.com/package/node-sass)
+- [nodemon 1.19.1](https://www.npmjs.com/package/nodemon)
+- [html-minifier 4.0.0](https://www.npmjs.com/package/html-minifier)
+- [imagemin 6.1.0](https://www.npmjs.com/package/imagemin)
+- [imagemin-cli 4.0.1](https://www.npmjs.com/package/imagemin-cli)
+- [imagemin-mozjpeg 8.0.0](https://www.npmjs.com/package/imagemin-mozjpeg)
+- [imagemin-pngquant 8.0.0](https://www.npmjs.com/package/imagemin-pngquant)
+- [imagemin-gifsicle 6.0.1](https://www.npmjs.com/package/imagemin-gifsicle)
+- [imagemin-svgo 7.0.0](https://www.npmjs.com/package/imagemin-svgo)
 
 ## Commands / How to run
 
@@ -52,7 +55,7 @@ so you can see `127.0.0.1:8080` as `src/index.html`. When you update `src/scss/s
 
 
 ### Build (minifying CSS, HTML, images)
-Building all the assets minifying custom.css by using yuicompressor, index.html by html-minifier, and images by imagemin. Use the command:
+Building all the assets minifying custom.css by using node-sass (with css-compression option), index.html by html-minifier, and images by imagemin. Use the command:
 ```
 npm run build
 ```

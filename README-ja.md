@@ -13,26 +13,29 @@
 - Live reloadでhtml, scssのソース修正を検知してリロードするlocal web serverを起動可能
 
 
-## 環境
+## 環境 (2019)
 #### 1. システム環境 (私のマシンの環境)
-- OSX 10.11.6 El Capitan
-- homebrew 0.9.9
+- OSX 10.14.5 Mojave
+- homebrew 2.1.4
 
 #### 2. 内包するhtml/cssの環境
 - bootstrap 3.3.1 (minimumly included)
 
 #### 3. node / npmの環境 (私のマシンの環境) - homebrewからインストール。最新のものしか動作確認していません
-- node v6.7.0
-- npm 3.10.3
+- node v12.4.0
+- npm 6.9.0
 
 ###### packageの環境
-- [lr-http-server 0.1.5](https://www.npmjs.com/package/lr-http-server)
-- [node-sass 3.10.1](https://www.npmjs.com/package/node-sass)
-- [nodemon 1.11.0](https://www.npmjs.com/package/nodemon)
-- [yuicompressor 2.4.8](https://www.npmjs.com/package/yuicompressor)
-- [html-minifier 3.1.0](https://www.npmjs.com/package/html-minifier)
-- [imagemin 5.2.2](https://www.npmjs.com/package/imagemin)
-- [imagemin-cli 3.0.0](https://www.npmjs.com/package/imagemin-cli)
+- [lr-http-server 0.1.5](https://www.npmjs.com/package/lr-http-server): http server + live reload
+- [node-sass 4.12.0](https://www.npmjs.com/package/node-sass): sass + css圧縮
+- [nodemon 1.19.1](https://www.npmjs.com/package/nodemon)
+- [html-minifier 4.0.0](https://www.npmjs.com/package/html-minifier): html圧縮
+- [imagemin 6.1.0](https://www.npmjs.com/package/imagemin): 各種画像圧縮
+- [imagemin-cli 4.0.1](https://www.npmjs.com/package/imagemin-cli)
+- [imagemin-mozjpeg 8.0.0](https://www.npmjs.com/package/imagemin-mozjpeg)
+- [imagemin-pngquant 8.0.0](https://www.npmjs.com/package/imagemin-pngquant)
+- [imagemin-gifsicle 6.0.1](https://www.npmjs.com/package/imagemin-gifsicle)
+- [imagemin-svgo 7.0.0](https://www.npmjs.com/package/imagemin-svgo)
 
 ## コマンド / 操作方法
 
@@ -55,7 +58,7 @@ npm run server
 ```
 npm run build
 ```
-を使用すると、yuicompressorによって`src/css/custom.css`が圧縮されて`dist/css/custom.css`に、html-minifierによって`src/index.html`が圧縮されて`dist/index.html`に保存されます。（現時点では他のcssファイルを結合したりすることはできません。）
+を使用すると、node-sass（CSS圧縮オプション付き）によって`src/css/custom.css`が圧縮されて`dist/css/custom.css`に、html-minifierによって`src/index.html`が圧縮されて`dist/index.html`に保存されます。（現時点では他のcssファイルを結合したりすることはできません。）
 
 ### ビルド後の圧縮されたHTML、CSS、画像を、Production環境で確認する
 ```
