@@ -5,17 +5,17 @@
         "build:css-dev": "node-sass --include-path scss src/scss/styles.scss src/css/custom.css",
         "watch:css-dev": "nodemon -e scss -x \"npm run build:css-dev\"",
         "watch": "npm run watch:css-dev",
-        "server": "lr-http-server -p 8080 -d src/ -l 35729 -w css/*.css,*.html",
+        "start": "browser-sync start --server './src/' --index index.html --files='**/*.*'",
         "build:css": "node-sass --include-path scss src/scss/styles.scss dist/css/custom.css",
         "minify:images": "node lib/imagemin.js",
         "minify:customcss": "node-sass --include-path scss src/scss/styles.scss dist/css/custom.css --output-style compressed",
         "minify:html": "html-minifier src/index.html --collapse-boolean-attributes --collapse-whitespace --decode-entities --html5 --process-conditional-comments --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype -o dist/index.html",
-        "server-prd": "lr-http-server -p 8000 -d dist/ -l false",
+        "start-prd": "browser-sync start --server './dist/' --index index.html --files='**/*.*'",
         "build": "npm run build:css && npm run minify:customcss && npm run minify:html && npm run minify:images",
-        "Lp": "npm run build && npm run server-prd"
+        "Lp": "npm run build && npm run start-prd"
     },
     "devDependencies": {
-        "lr-http-server": "^0.1.5",
+        "browser-sync": "^2.26.7",
         "node-sass": "^4.12.0",
         "nodemon": "^1.19.1",
         "html-minifier": "^4.0.0",

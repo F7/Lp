@@ -8,7 +8,7 @@ When version upgraded, you need to type `npm install` once again to install newl
 - Use [Bootstrap](http://getbootstrap.com) as base css framework.
 - Other CSS is built as custom.css from [node-sass](https://www.npmjs.com/package/node-sass).
 - Do not use other task runners such as Grunt, Gulp, etc.
-- Local web server with live reload detecting the file updates of html, scss.
+- Local web server with live reload detecting the file updates of html, scss by [Browsersync](https://browsersync.io/).
 
 
 ## Environment (2019)
@@ -25,7 +25,7 @@ When version upgraded, you need to type `npm install` once again to install newl
 - npm 6.9.0
 
 ###### package requirement
-- [lr-http-server 0.1.5](https://www.npmjs.com/package/lr-http-server)
+- [browser-sync 2.26.7](https://www.npmjs.com/package/browser-sync)
 - [node-sass 4.12.0](https://www.npmjs.com/package/node-sass)
 - [nodemon 1.19.1](https://www.npmjs.com/package/nodemon)
 - [html-minifier 4.0.0](https://www.npmjs.com/package/html-minifier)
@@ -48,10 +48,10 @@ npm run watch
 
 then open window2 and:
 ```
-npm run server
+npm start
 ```
 
-so you can see `127.0.0.1:8080` as `src/index.html`. When you update `src/scss/styles.scss` or `any html files on dist directory`, the changes are detected by live-reloading process at window2 with scss files converted to `src/css/custom.css`, then the page is automatically reloaded.
+so you can see `localhost:3000` as `src/index.html`. When you update `src/scss/styles.scss` or `any html files on dist directory`, the changes are detected by live-reloading process at window2 with scss files converted to `src/css/custom.css`, then the page is automatically reloaded. 
 
 
 ### Build (minifying CSS, HTML, images)
@@ -65,7 +65,7 @@ then it will compress src/img/*, src/css/custom.css, src/index.html and save the
 ```
 npm run Lp
 ```
-Type this command to run build process and production webserver to check out the built HTML on dist directory. You can see `127.0.0.1:8000` opened from `dist/index.html` (No live-reloading) with all minified assets.
+Type this command to run build process and production webserver to check out the built HTML on dist directory. You can see `localhost:3000` opened from `dist/index.html` (No live-reloading) with all minified assets.
 
 ## Next Steps
 - clean all the files when building
@@ -83,8 +83,8 @@ The references of all the commands. Only four commands with (*) at the bottom ar
 | minify:customcss | minifying dist/css/custom.css and overwrite |
 | minify:html| minifying src/index.html and saving at dist/index.html |
 | minify:images | minifying all the images at src/img/* and saving at dist/img/* |
-| server-prd | running webserver to 127.0.0.1:8000 from dist directory (no live-reloading) |
+| start-prd | running webserver to localhost:3000 from dist directory with livereloadingoption |
 | __watch__ * | shortcut command of watch:css-dev |
-| __server__ * | running webserver to 127.0.0.1:8080 from src directory with livereloading at :35729 |
+| __start__ * | running webserver to localhost:3000 from src directory with livereloading option |
 | __build__ * | build:css + minify:customcss + minify:html + minify:images |
-| __Lp__ * | build + server-prd |
+| __Lp__ * | build + start-prd |
