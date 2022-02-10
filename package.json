@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",
-        "node-sass": "^4.12.0",
+        "node-sass": "^7.0.0",
         "nodemon": "^1.19.1",
         "html-minifier": "^4.0.0",
         "imagemin": "^6.1.0",
